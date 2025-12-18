@@ -25,11 +25,36 @@
       margin-top: -10px;
       margin-bottom: 32px;
     }
+
+    /* HEADSHOT */
+    .headshot {
+      width: 180px;
+      border-radius: 50%;
+      display: block;
+      margin: 24px 0 40px;
+    }
+
+    /* PROJECT LAYOUT */
     .project {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 40px;
+      align-items: flex-start;
       border-left: 3px solid #4da3ff;
       padding-left: 16px;
-      margin-bottom: 28px;
     }
+
+    .project img {
+      width: 220px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
     a {
       color: #4da3ff;
       text-decoration: none;
@@ -37,6 +62,16 @@
     }
     a:hover {
       text-decoration: underline;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      .project {
+        flex-direction: column;
+      }
+      .project img {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -47,6 +82,13 @@
       Computer Engineering student · systems · low-level programming
     </p>
 
+    <!-- HEADSHOT -->
+    <img
+      src="images/headshot.jpg"
+      alt="Photo of Tim Guilmette"
+      class="headshot"
+    >
+
     <p>
       I’m a Computer Engineering student interested in systems,
       performance-oriented software, and technically grounded projects.
@@ -56,23 +98,37 @@
 
     <h2>Projects</h2>
 
+    <!-- PROJECT 1 -->
     <div class="project">
-      <h3>Baseball Trajectory Model</h3>
-      <p>
-        Physics-based simulation comparing drag vs. no-drag trajectories
-        using real MLB Statcast data.
-      </p>
-      <p><strong>Tech:</strong> MATLAB, numerical methods, C (planned)</p>
-      <a href="baseball.html">View project →</a>
+      <img
+        src="images/baseball.gif"
+        alt="Baseball trajectory simulation GIF"
+      >
+      <div class="project-content">
+        <h3>Baseball Trajectory Model</h3>
+        <p>
+          Physics-based simulation comparing drag vs. no-drag trajectories
+          using real MLB Statcast data.
+        </p>
+        <p><strong>Tech:</strong> MATLAB, numerical methods, C (planned)</p>
+        <a href="baseball.html">View project →</a>
+      </div>
     </div>
 
+    <!-- PROJECT 2 -->
     <div class="project">
-      <h3>Stock Ticker</h3>
-      <p>
-        Real-time stock ticker built in Python using market APIs.
-      </p>
-      <p><strong>Tech:</strong> Python</p>
-      <a href="ticker.html">View project →</a>
+      <img
+        src="images/ticker.gif"
+        alt="Stock ticker demo GIF"
+      >
+      <div class="project-content">
+        <h3>Stock Ticker</h3>
+        <p>
+          Real-time stock ticker built in Python using market APIs.
+        </p>
+        <p><strong>Tech:</strong> Python</p>
+        <a href="ticker.html">View project →</a>
+      </div>
     </div>
 
     <h2>Links</h2>
